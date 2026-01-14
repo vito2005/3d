@@ -988,7 +988,6 @@ export default function EcosystemCoin3D({
         const forwardPhase = cycleTime <= halfCycleDuration;
         const phaseTime = forwardPhase ? cycleTime : cycleTime - halfCycleDuration;
         const tNorm = phaseTime / halfCycleDuration;
-        console.log('tNorm', tNorm);
         const eased = easeInOut(tNorm);
         const totalPhaseProgress = range === 0
           ? midPoint
