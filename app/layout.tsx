@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Suspense } from "react";
 import Menu from "./components/menu";
+import Metrika from "./components/metrika";
+import PoweredBy from "./components/powered-by";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,6 +33,10 @@ export default function RootLayout({
       >
         <Menu />
         {children}
+        <PoweredBy />
+        <Suspense>
+          <Metrika />
+        </Suspense>
       </body>
     </html>
   );
